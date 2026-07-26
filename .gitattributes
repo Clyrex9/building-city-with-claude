@@ -1,0 +1,18 @@
+* text=auto eol=lf
+
+*.gd      text eol=lf
+*.tscn    text eol=lf
+*.tres    text eol=lf
+*.godot   text eol=lf
+*.md      text eol=lf
+*.py      text eol=lf
+
+*.blend   binary
+*.glb     binary
+*.gltf    binary
+*.png     binary
+*.jpg     binary
+*.exr     binary
+*.hdr     binary
+*.ogg     binary
+*.wav     binary
