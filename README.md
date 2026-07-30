@@ -8,10 +8,25 @@ No asset store, no downloaded models, no AI-generated meshes. A modular kit is b
 by hand, buildings are assembled from that kit, and the result is a walkable city
 block you can download and play.
 
-> **Status:** scaffolding. Specification and conventions are in place; the city
-> itself is not built yet. Follow along in `docs/` and the commit history.
+**📺 The whole thing is recorded:
+[Building a City With Claude — YouTube playlist](https://www.youtube.com/playlist?list=PLf0TVwCtMntw)**
+
+Every commit in this repository belongs to an episode. Nothing is built off-camera.
 
 ---
+
+## Episodes
+
+| # | Episode | What landed in the repo |
+|---|---|---|
+| 01 | Grey-box block | The street layout and six building volumes, blocked out on the 4 m grid — [`city_greybox.blend`](blender/src/) |
+| 02 | The modular building | First modular building mass built from the kit rules — [`city_ep02_modular_building.blend`](blender/src/) |
+
+New episodes are added to the [playlist](https://www.youtube.com/playlist?list=PLf0TVwCtMntw)
+as they go up. To follow the build itself, read the commit history alongside them.
+
+> **Status:** grey-box stage. The block and the first modular building exist as
+> Blender sources; the Godot side is still the scaffold. The city is not playable yet.
 
 ## How it works
 
@@ -70,6 +85,8 @@ producing consistent geometry across many sessions:
   and reason about assets without reading every file.
 - **Explicit tri budgets per asset class**, checked at export, instead of a
   performance panic at the end.
+- **Grey-box before art.** Nothing gets modeled properly until the space it lives in
+  is walkable.
 - **A written icebox.** Out-of-scope ideas get recorded, not built. This is the
   single most effective guard against agent scope creep.
 
@@ -79,7 +96,7 @@ producing consistent geometry across many sessions:
 MCP plugin · Claude Code with both servers configured.
 
 ```bash
-git clone <this repo>
+git clone https://github.com/Clyrex9/building-city-with-claude.git
 cd building-city-with-claude
 ```
 
